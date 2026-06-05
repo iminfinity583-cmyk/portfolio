@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <header>
@@ -16,10 +17,11 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
     </nav>
   </header>
 
-  <section id="home" class="hero">
+  <section id="home" class="hero reveal">
     <div class="hero-content">
       <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
       <p>Web Developer | Designer | Creator</p>
@@ -27,7 +29,7 @@
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="about reveal">
     <h2>About Me</h2>
     <div class="about-content">
       <div class="about-text">
@@ -48,25 +50,28 @@
     </div>
   </section>
 
-  <section id="projects" class="projects">
+  <section id="projects" class="projects reveal">
     <h2>My Projects</h2>
     <div class="project-grid">
-      <div class="project-card">
+      <div class="project-card reveal">
+        <i class="fas fa-code project-icon"></i>
         <h3>Project 1</h3>
         <p>A cool project I built.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card reveal">
+        <i class="fas fa-mobile-alt project-icon"></i>
         <h3>Project 2</h3>
         <p>Another awesome project.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card reveal">
+        <i class="fas fa-rocket project-icon"></i>
         <h3>Project 3</h3>
         <p>Yet another great project.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact reveal">
     <h2>Contact Me</h2>
     <form id="contact-form">
       <input type="text" placeholder="Your Name" required>
