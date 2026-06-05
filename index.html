@@ -21,7 +21,7 @@
         <li><a href="./" class="active">Home</a></li>
         <li><a href="#categories">Categories</a></li>
         <li><a href="shop/">Shop</a></li>
-        <li><a href="#" onclick="showAdmin(event)">Admin</a></li>
+        <li><a href="#" id="adminLink">Admin</a></li>
       </ul>
       <div class="nav-actions">
         <button id="themeToggle" class="theme-btn" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
@@ -74,7 +74,7 @@
         <p>&copy; 2026 Vineet Library. Free ebooks for everyone.</p>
         <div class="footer-links">
           <a href="shop/">Shop</a>
-          <a href="#" onclick="showAdmin(event)">Admin</a>
+          <a href="#" id="adminLinkFooter">Admin</a>
         </div>
       </div>
     </div>
@@ -88,15 +88,15 @@
       <div id="adminLogin">
         <p>Enter password to manage books.</p>
         <div class="admin-input-group">
-          <input type="password" id="adminPass" placeholder="Password" onkeydown="if(event.key==='Enter')adminLogin()">
-          <button class="btn primary" onclick="adminLogin()">Login</button>
+          <input type="password" id="adminPass" placeholder="Password">
+          <button class="btn primary" id="adminLoginBtn">Login</button>
         </div>
         <p class="admin-error" id="adminError"></p>
       </div>
       <div id="adminPanel" style="display:none">
         <div class="admin-tabs">
-          <button class="admin-tab active" onclick="switchAdminTab('add', this)">Add Book</button>
-          <button class="admin-tab" onclick="switchAdminTab('manage', this)">Manage Books</button>
+          <button class="admin-tab active" id="adminTabAdd">Add Book</button>
+          <button class="admin-tab" id="adminTabManage">Manage Books</button>
         </div>
 
         <div id="adminAdd" class="admin-tab-content">
@@ -118,7 +118,7 @@
                 <input type="file" id="pdfUpload" accept=".pdf" style="display:none" onchange="handlePdfUpload(event)">
               </label>
             </div>
-            <button class="btn primary" onclick="addBook()"><i class="fas fa-plus"></i> Add Book</button>
+            <button class="btn primary" id="addBookBtn"><i class="fas fa-plus"></i> Add Book</button>
           </div>
         </div>
 
