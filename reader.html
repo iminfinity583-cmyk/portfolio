@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read — Vineet Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body class="reader-body">
+
+  <div class="reader-toolbar">
+    <div class="reader-toolbar-left">
+        <a href="./" class="reader-back"><i class="fas fa-arrow-left"></i> Library</a>
+      <span class="reader-title" id="readerTitle">Loading...</span>
+    </div>
+    <div class="reader-toolbar-right">
+      <span class="reader-page-info" id="pageInfo">Page <span id="currentPage">1</span> of <span id="totalPages">-</span></span>
+      <div class="reader-nav">
+        <button onclick="prevPage()" id="prevBtn" disabled><i class="fas fa-chevron-left"></i></button>
+        <input type="number" id="pageInput" value="1" min="1" onchange="goToPage(this.value)" onkeydown="if(event.key==='Enter')goToPage(this.value)">
+        <button onclick="nextPage()" id="nextBtn" disabled><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="reader-zoom">
+        <button onclick="zoomOut()"><i class="fas fa-search-minus"></i></button>
+        <span id="zoomLevel">100%</span>
+        <button onclick="zoomIn()"><i class="fas fa-search-plus"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reader-container" id="readerContainer">
+    <canvas id="pdfCanvas"></canvas>
+  </div>
+
+  <script src="reader.js"></script>
+</body>
+</html>

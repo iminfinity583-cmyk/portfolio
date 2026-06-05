@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "The Art of War",
+    "author": "Sun Tzu",
+    "description": "An ancient Chinese military treatise. A timeless guide to strategy, leadership, and winning without fighting.",
+    "cover": "",
+    "file": "books/sample.pdf",
+    "category": "Philosophy",
+    "pages": 68,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": 2,
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "description": "Personal writings of the Roman emperor on Stoic philosophy. Reflections on virtue, duty, and the nature of life.",
+    "cover": "",
+    "file": "books/sample.pdf",
+    "category": "Philosophy",
+    "pages": 180,
+    "dateAdded": "2026-06-01"
+  },
+  {
+    "id": 3,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A story of wealth, love, and the American Dream set in the Jazz Age. One of the greatest American novels.",
+    "cover": "",
+    "file": "books/sample.pdf",
+    "category": "Fiction",
+    "pages": 180,
+    "dateAdded": "2026-06-02"
+  },
+  {
+    "id": 4,
+    "title": "Think and Grow Rich",
+    "author": "Napoleon Hill",
+    "description": "A classic personal development book exploring the principles of success, wealth, and achieving your goals.",
+    "cover": "",
+    "file": "books/sample.pdf",
+    "category": "Self-Help",
+    "pages": 233,
+    "dateAdded": "2026-06-02"
+  },
+  {
+    "id": 5,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A young shepherd's journey to find treasure teaches him about life, love, and following his dreams.",
+    "cover": "",
+    "file": "books/sample.pdf",
+    "category": "Fiction",
+    "pages": 163,
+    "dateAdded": "2026-06-03"
+  },
+  {
+    "id": 6,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "description": "An easy and proven way to build good habits and break bad ones. Small changes lead to remarkable results.",
+    "cover": "",
+    "file": "books/sample.pdf",
+    "category": "Self-Help",
+    "pages": 320,
+    "dateAdded": "2026-06-03"
+  }
+]

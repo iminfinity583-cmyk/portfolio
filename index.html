@@ -3,219 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vineet — Building tools and software that solve real problems.">
-  <meta property="og:title" content="Vineet | Software & Tools">
-  <meta property="og:description" content="Custom software, tools, and digital products.">
-  <meta name="theme-color" content="#1a1a2e">
-  <title>Vineet — Software & Tools</title>
+  <meta name="description" content="Vineet — Free Ebook Library. Read ebooks online for free.">
+  <title>Vineet — Free Ebook Library</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <nav>
-      <a href="#home" class="logo">Vineet</a>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#services">Services</a></li>
+      <a href="./" class="logo">Vineet Library</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./" class="active">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
         <li><a href="shop/">Shop</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" onclick="showAdmin(event)">Admin</a></li>
       </ul>
       <div class="nav-actions">
-        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
         <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </header>
 
-  <section id="home" class="hero">
+  <!-- Hero -->
+  <section class="hero">
     <div class="hero-content">
-      <p class="hero-label">Software & Tools</p>
-      <h1>Vineet</h1>
-      <p class="hero-title">I build tools and software that solve real problems.</p>
-      <p class="hero-desc">Custom web applications, automation tools, e-commerce solutions, and digital products. From concept to deployment — I build things that work.</p>
-      <div class="hero-btns">
-        <a href="#tools" class="btn primary">See My Work <i class="fas fa-arrow-right"></i></a>
-        <a href="#contact" class="btn outline">Hire Me</a>
+      <h1>Free Ebook Library</h1>
+      <p class="hero-desc">Read ebooks online for free. Explore our growing collection of fiction, philosophy, self-help, and more.</p>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search books by title, author, or category..." oninput="filterBooks()">
       </div>
     </div>
   </section>
 
-  <section id="tools" class="tools">
+  <!-- Categories -->
+  <section id="categories" class="categories">
     <div class="container">
-      <h2 class="section-title">My Tools & Software</h2>
-      <p class="section-subtitle">Products I've built from scratch. Ready to use or customize for your needs.</p>
-      <div class="tools-grid">
-        <div class="tool-card">
-          <div class="tool-icon"><i class="fas fa-store"></i></div>
-          <div class="tool-body">
-            <h3>Somesh Premium — E-Commerce Store</h3>
-            <p>Full-featured clothing store with product catalog, cart, checkout, order tracking, and admin panel. Built with React, Node.js, and MongoDB.</p>
-            <div class="tool-meta">
-              <span class="tool-status available">Live Demo</span>
-              <span class="tool-price">Contact for Price</span>
-            </div>
-            <div class="tool-tags">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
-            </div>
-            <a href="shop/" class="btn small">Visit Store <i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-icon"><i class="fas fa-robot"></i></div>
-          <div class="tool-body">
-            <h3>Task Automation Toolkit</h3>
-            <p>Custom automation scripts and tools for file processing, data scraping, reporting, and system monitoring. Save hours of manual work.</p>
-            <div class="tool-meta">
-              <span class="tool-status dev">In Development</span>
-              <span class="tool-price">Custom Build</span>
-            </div>
-            <div class="tool-tags">
-              <span>Python</span>
-              <span>Bash</span>
-              <span>Node.js</span>
-            </div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-icon"><i class="fas fa-shield-alt"></i></div>
-          <div class="tool-body">
-            <h3>Security & Analysis Tools</h3>
-            <p>Collection of security auditing and network analysis tools. Password analysis, hash recovery, and system reporting utilities.</p>
-            <div class="tool-meta">
-              <span class="tool-status dev">In Development</span>
-              <span class="tool-price">Custom Build</span>
-            </div>
-            <div class="tool-tags">
-              <span>Python</span>
-              <span>Shell</span>
-              <span>Linux</span>
-            </div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-icon"><i class="fas fa-cogs"></i></div>
-          <div class="tool-body">
-            <h3>Custom Web Applications</h3>
-            <p>Tailor-made web apps for your business — dashboards, management systems, client portals, and more. Built to your exact requirements.</p>
-            <div class="tool-meta">
-              <span class="tool-status available">Available Now</span>
-              <span class="tool-price">Starts at $499</span>
-            </div>
-            <div class="tool-tags">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
-            </div>
-          </div>
-        </div>
+      <div class="category-filters" id="categoryFilters">
+        <button class="cat-btn active" data-cat="all" onclick="filterByCategory('all', this)">All</button>
       </div>
     </div>
   </section>
 
-  <section id="services" class="services">
+  <!-- Book Grid -->
+  <section class="books">
     <div class="container">
-      <h2 class="section-title">What I Offer</h2>
-      <p class="section-subtitle">Services tailored to your needs.</p>
-      <div class="services-list">
-        <div class="service-item">
-          <div class="service-icon"><i class="fas fa-code"></i></div>
-          <div>
-            <h3>Custom Software Development</h3>
-            <p>Web apps, desktop tools, automation scripts — I build software that does exactly what you need.</p>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
-          <div>
-            <h3>E-Commerce Setup</h3>
-            <p>Full online store setup with product management, payment integration, admin panel, and hosting.</p>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-          <div>
-            <h3>Website Design & Development</h3>
-            <p>Professional websites — portfolios, business sites, landing pages — designed and built from scratch.</p>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-icon"><i class="fas fa-tools"></i></div>
-          <div>
-            <h3>Tool Customization</h3>
-            <p>Already have a tool or script? I can modify, extend, or improve it to better fit your workflow.</p>
-          </div>
-        </div>
+      <div class="books-header">
+        <h2 class="section-title" id="sectionTitle">All Books</h2>
+        <span class="book-count" id="bookCount">0 books</span>
+      </div>
+      <div class="book-grid" id="bookGrid"></div>
+      <div class="empty-state" id="emptyState">
+        <i class="fas fa-book-open"></i>
+        <h3>No books found</h3>
+        <p>Try a different search or category.</p>
       </div>
     </div>
   </section>
 
-  <section class="metrics">
-    <div class="container">
-      <div class="metrics-grid">
-        <div class="metric">
-          <span class="metric-number">10+</span>
-          <span class="metric-label">Projects Built</span>
-        </div>
-        <div class="metric">
-          <span class="metric-number">100%</span>
-          <span class="metric-label">Client Satisfaction</span>
-        </div>
-        <div class="metric">
-          <span class="metric-number">24h</span>
-          <span class="metric-label">Typical Response Time</span>
-        </div>
-        <div class="metric">
-          <span class="metric-number">Custom</span>
-          <span class="metric-label">Tailored Solutions</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <h2 class="section-title">Let's Build Something</h2>
-        <p class="section-subtitle">Have a project in mind? Need a custom tool? Let's talk.</p>
-        <div class="contact-methods">
-          <a href="mailto:vineet@example.com" class="contact-card">
-            <i class="fas fa-envelope"></i>
-            <span>Email Me</span>
-          </a>
-          <a href="https://github.com/iminfinity583-cmyk" class="contact-card">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
-          </a>
-          <a href="#" class="contact-card">
-            <i class="fas fa-comment"></i>
-            <span>WhatsApp</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-content">
-        <p>&copy; 2026 Vineet. All rights reserved.</p>
+        <p>&copy; 2026 Vineet Library. Free ebooks for everyone.</p>
         <div class="footer-links">
-          <a href="https://github.com/iminfinity583-cmyk">GitHub</a>
           <a href="shop/">Shop</a>
+          <a href="#" onclick="showAdmin(event)">Admin</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <!-- Admin Modal -->
+  <div class="modal-overlay" id="adminModal" onclick="closeAdmin(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeAdmin()">&times;</button>
+      <h2>Admin Panel</h2>
+      <div id="adminLogin">
+        <p>Enter password to manage books.</p>
+        <div class="admin-input-group">
+          <input type="password" id="adminPass" placeholder="Password" onkeydown="if(event.key==='Enter')adminLogin()">
+          <button class="btn primary" onclick="adminLogin()">Login</button>
+        </div>
+        <p class="admin-error" id="adminError"></p>
+      </div>
+      <div id="adminPanel" style="display:none">
+        <div class="admin-tabs">
+          <button class="admin-tab active" onclick="switchAdminTab('add', this)">Add Book</button>
+          <button class="admin-tab" onclick="switchAdminTab('manage', this)">Manage Books</button>
+        </div>
+
+        <div id="adminAdd" class="admin-tab-content">
+          <div class="admin-form">
+            <input type="text" id="bookTitle" placeholder="Book Title" required>
+            <input type="text" id="bookAuthor" placeholder="Author" required>
+            <textarea id="bookDesc" placeholder="Description" rows="3"></textarea>
+            <div class="admin-row">
+              <input type="text" id="bookCategory" placeholder="Category (e.g. Fiction)">
+              <input type="number" id="bookPages" placeholder="Pages">
+            </div>
+            <div class="admin-row">
+              <input type="text" id="bookCover" placeholder="Cover Image URL (optional)">
+            </div>
+            <div class="admin-row">
+              <input type="text" id="bookFile" placeholder="PDF URL or path (e.g. books/book.pdf)">
+              <label class="upload-btn">
+                <i class="fas fa-upload"></i> Upload PDF
+                <input type="file" id="pdfUpload" accept=".pdf" style="display:none" onchange="handlePdfUpload(event)">
+              </label>
+            </div>
+            <button class="btn primary" onclick="addBook()"><i class="fas fa-plus"></i> Add Book</button>
+          </div>
+        </div>
+
+        <div id="adminManage" class="admin-tab-content" style="display:none">
+          <div class="admin-book-list" id="adminBookList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
   <script src="script.js"></script>
 </body>
 </html>
